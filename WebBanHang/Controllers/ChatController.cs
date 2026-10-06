@@ -149,7 +149,7 @@ namespace WebBanHang.Controllers
         // Gọi API Gemini 
         private async Task<string> GetGeminiResponse(string userMessage)
         {
-            string apiKey = "AQ.Ab8RN6IPL1Q4E-DzkdOAr-W7r1XC44MB11bEVkEy0XbB42Ry-w";
+            string apiKey = "YOUR_API_KEY_HERE";
             string url = $"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={apiKey}";
             var requestBody = new { contents = new[] { new { parts = new[] { new { text = "Trả lời ngắn gọn: " + userMessage } } } } };
             string jsonPayload = JsonConvert.SerializeObject(requestBody);
